@@ -1,6 +1,7 @@
 const path = require("path")
 
 module.exports = {
+  important: true, // Added to ensure our styles take precedence
   darkMode: "class",
   presets: [require("@medusajs/ui-preset")],
   content: [
@@ -12,15 +13,10 @@ module.exports = {
   ],
   theme: {
     extend: {
-      transitionProperty: {
-        width: "width margin",
-        height: "height",
-        bg: "background-color",
-        display: "display opacity",
-        visibility: "visibility",
-        padding: "padding-top padding-right padding-bottom padding-left",
-      },
       colors: {
+        background: {
+          DEFAULT: '#FEFAF3'  // Your cream color
+        },
         grey: {
           0: "#FFFFFF",
           5: "#F9FAFB",
@@ -34,6 +30,14 @@ module.exports = {
           80: "#1F2937",
           90: "#111827",
         },
+      },
+      transitionProperty: {
+        width: "width margin",
+        height: "height",
+        bg: "background-color",
+        display: "display opacity",
+        visibility: "visibility",
+        padding: "padding-top padding-right padding-bottom padding-left",
       },
       borderRadius: {
         none: "0px",
@@ -60,15 +64,10 @@ module.exports = {
       },
       fontFamily: {
         sans: [
-          "Inter",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "Segoe UI",
-          "Roboto",
           "Helvetica Neue",
-          "Ubuntu",
-          "sans-serif",
-        ],
+          "Helvetica"
+        ]
+
       },
       keyframes: {
         ring: {

@@ -2,6 +2,23 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@layer base {
+  html {
+    @apply bg-background;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  }
+  
+  body {
+    @apply bg-background;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  }
+
+  /* Target all text elements specifically */
+  h1, h2, h3, h4, h5, h6, p, span, div, button, a {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  }
+}
+
 @layer utilities {
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
